@@ -1,0 +1,11 @@
+## Generates a table named User, with the attributes of name, photo, bio & post_counter ##
+rails generate model User name:string photo:string bio:text posts_counter:integer
+
+## Generates a table named Post, with the attributes author, title, text, comments_counter & likes_counter ##
+rails generate model Post author:references title:string text:text comments_counter:integer likes_counter:integer
+
+## Generates a table named Comment, with the attributes of author, post & text ##
+rails generate model Comment author:references post:belongs_to text:text
+
+## Generates a table named Like, with the attributes author & post ##
+rails generate model Like author:references post:belongs_to
