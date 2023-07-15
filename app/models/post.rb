@@ -13,7 +13,7 @@ class Post < ApplicationRecord
     puts "Post count: #{user.posts_counter}"
   end
 
-  def find_recent_posts
+  def find_recent_comments
     comments.order(created_at: :desc).limit(5)
   end
 end
