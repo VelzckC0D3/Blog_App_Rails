@@ -4,11 +4,9 @@ class Comment < ApplicationRecord
 
   def add_count
     post.increment!(:comments_counter)
-    puts "Comments count: #{user.comments_counter}"
   end
 
   def remove_count
     post.decrement!(:comments_counter)
-    puts "Comments count: #{user.comments_counter}"
   end
 end

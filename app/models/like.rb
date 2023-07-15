@@ -4,11 +4,9 @@ class Like < ApplicationRecord
 
   def add_count
     post.increment!(:likes_counter)
-    puts "Likes count: #{user.likes_counter}"
   end
 
   def remove_count
     post.decrement!(:likes_counter)
-    puts "Likes count: #{user.likes_counter}"
   end
 end
