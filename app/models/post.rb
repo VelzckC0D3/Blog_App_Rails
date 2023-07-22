@@ -7,6 +7,9 @@ class Post < ApplicationRecord
   validates :comments_counter, numericality: { greater_than_or_equal_to: 0, only_integer: true }
   validates :likes_counter, numericality: { greater_than_or_equal_to: 0, only_integer: true }
 
+  after_create :add_count # after create, increment post count
+  after_destroy :remove_count # after destroy, decrement post count
+
   def add_count
     user.increment!(:posts_counter)
     puts "Post count: #{user.posts_counter}"
