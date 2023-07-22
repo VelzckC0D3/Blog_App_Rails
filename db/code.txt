@@ -9,3 +9,23 @@ rails generate model Comment author:references post:belongs_to text:text
 
 ## Generates a table named Like, with the attributes author & post ##
 rails generate model Like author:references post:belongs_to
+
+## Users information
+    first_user = User.create(name: 'Tom', photo: 'https://i.imgur.com/opVhHaf.png', bio: 'Teacher from Mexico.', posts_counter: 0)
+    second_user = User.create(name: 'Lilly', photo: 'https://i.imgur.com/eJz4b1I.png', bio: 'Teacher from Poland.', posts_counter: 0)
+
+# User Post
+    first_post = Post.create(author_id: 1, title: 'My First Post', text: 'This is my first post', comments_counter: 0, likes_counter: 0)
+    second_post = Post.create(author_id: 1, title: 'My Second Post', text: 'This is my second post', comments_counter: 0, likes_counter: 0)
+    third_post = Post.create(author_id: 1, title: 'My Third Post', text: 'This is my third post', comments_counter: 0, likes_counter: 0)
+    fourth_post = Post.create(author_id: 1, title: 'My Fourth Post', text: 'This is my fourth post', comments_counter: 0, likes_counter: 0)
+
+# Post Comments
+    first_comment = Comment.create(author_id: 2, post_id: 1, text: 'This is my first comment')
+    second_comment = Comment.create(author_id: 2, post_id: 1, text: 'This is my second comment')
+    third_comment = Comment.create(author_id: 2, post_id: 1, text: 'This is my third comment')
+    fourth_comment = Comment.create(author_id: 2, post_id: 1, text: 'This is my fourth comment')
+    fifth_comment = Comment.create(author_id: 2, post_id: 1, text: 'This is my fifth comment')
+    sixth_comment = Comment.create(author_id: 2, post_id: 1, text: 'This is my sixth comment')  
+
+
