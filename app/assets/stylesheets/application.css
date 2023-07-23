@@ -7,3 +7,47 @@
   text-decoration: none;
   color: black;
 }
+
+ul {
+  list-style: none !important;
+}
+
+.ul-comments-box {
+  background-color: rgb(182, 182, 182);
+  margin-top: 0.5rem;
+}
+
+.post-form {
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formCont {
+  width: 100%;
+  background-color: rgb(226, 226, 226);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  max-width: 30rem;
+  min-width: 15rem;
+}
+
+.comment-form {
+  margin: 3rem 4rem;
+}
+
+.commentCount {
+  padding: 1rem;
+  background-color: rgb(226, 226, 226);
+}
+
+#comment_text {
+  max-width: 15rem;
+}

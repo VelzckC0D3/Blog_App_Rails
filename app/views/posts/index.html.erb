@@ -11,6 +11,9 @@
   </div>
 
     <%= render 'posts_display' %>
+    <%= notice %>
+    <%= alert %>
+    <%=link_to 'New Post', new_user_post_path, class: 'btn btn-primary' %>
 
     <button class="btn">pagination</button>
     </div>
