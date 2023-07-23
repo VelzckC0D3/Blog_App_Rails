@@ -1,0 +1,109 @@
+.post {
+    padding: 3rem 4rem;
+}
+
+.postsCont { 
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.userCard {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    transition: all 150ms ease-in-out;
+    gap: 2rem;
+}
+
+.photo {
+    height: 9rem;
+    border: 2px solid rgb(226, 226, 226);
+}
+
+.userInfo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: rgb(226, 226, 226);
+}
+
+.userName {
+    width: 50%;
+    font-weight: bold;
+    color: black;
+    align-self: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.totalPosts {
+    width: 50%;
+    text-align: center;
+    align-self: flex-end;
+    color: black;
+}
+
+.userPost {
+    background-color: rgb(226, 226, 226);
+    padding: 1rem;
+    transition: all 150ms ease-in-out;
+    min-width: 100%;
+}
+
+.userPost {
+    width: 100%;
+}
+
+.postCont {
+    width: 100%;
+}
+
+.userPost:hover {
+    transform: scale(1.05);
+    background-color: rgb(180, 180, 180);
+}
+
+.btn {
+    background-color: rgb(226, 226, 226);
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(163, 163, 163);
+    transition: all 150ms ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgb(163, 163, 163);
+    color: white;
+    transform: scale(1.05);
+}
+
+.postCont {
+    background-color: rgb(226, 226, 226);
+    padding: 1rem;
+    transition: all 150ms ease-in-out;
+    min-width: 100%;
+}
+
+.commentsCont {
+    list-style: none;
+    margin: 0.25rem 0;
+    background-color: rgb(196, 196, 196);
+    padding: 1rem;
+}
+
+.postCont:hover + .commentsCont:hover {
+    transform: scale(1.05);
+    background-color: rgb(180, 180, 180);
+}
+
+.postLink {
+    transition: all 150ms ease-in-out;
+}
+
+.postLink:hover {
+    transform: scale(1.05);
+}

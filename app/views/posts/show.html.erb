@@ -1,1 +1,13 @@
-<h1>User post details</h1>
+<html>
+  <head>
+    <%= stylesheet_link_tag 'post_details' %>
+  </head>
+
+  <body>
+  <div class="post"> 
+    <%= render 'post_card' %>
+
+    <%= render_comments_section(@post) %>
+    </div>
+  </body>
+</html>
