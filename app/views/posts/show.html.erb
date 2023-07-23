@@ -6,8 +6,11 @@
   <body>
   <div class="post"> 
     <%= render 'post_card' %>
-
+    
+    <%= notice %>
+    <%= alert %>
     <%= render_comments_section(@post) %>
+    <%=link_to 'New Comment', new_comment_path, class: 'btn-new' %>
     </div>
   </body>
 </html>

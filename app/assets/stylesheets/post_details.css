@@ -74,12 +74,23 @@
   padding: 0.5rem 1rem;
   border: 2px solid rgb(163, 163, 163);
   transition: all 150ms ease-in-out;
+  transform: translateY(-1rem);
 }
 
 .btn:hover {
   background-color: rgb(163, 163, 163);
   color: white;
   transform: scale(1.05);
+}
+
+.btn-new {
+  position: absolute;
+  margin-top: 1.5rem;
+  background-color: rgb(226, 226, 226);
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(163, 163, 163);
+  transition: all 150ms ease-in-out;
+  transform: translateY(-1rem);
 }
 
 .commentsCont {
@@ -100,4 +111,8 @@
 
 .postLink:hover {
   transform: scale(1.05);
+}
+
+ul {
+  list-style: none;
 }
