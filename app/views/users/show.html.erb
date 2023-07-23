@@ -1,1 +1,24 @@
-<h1>User Details</h1>
+<html>
+  <head>
+    <%= stylesheet_link_tag 'user_details' %>
+  </head>
+
+  <body>
+
+  <div class="userCont">
+  <div class="userCard">
+    <%= render 'shared/user_card', user: @user %>
+  </div>
+    <div class="userBio">
+      <h2 class="bioTitle">Bio</h2>
+      <p class="bioText"><%= @user.bio %></p>
+    </div>
+
+    <%= render partial: 'shared/posts_card', locals: { posts: @user.posts } %>
+
+    <%= link_to 'See more', user_posts_path(@user), class: 'btn' %>
+
+
+  </div>
+  </body>
+</html>

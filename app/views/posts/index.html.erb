@@ -1,1 +1,18 @@
-<h1>User post list</h1>
+<%  PostsHelper %>
+
+<html>
+  <head>
+    <%= stylesheet_link_tag 'posts' %>
+  </head>
+  <body>
+  <div class="postsCont"> 
+  <div class="userCard">
+    <%= render 'shared/user_card', user: @user %>
+  </div>
+
+    <%= render 'posts_display' %>
+
+    <button class="btn">pagination</button>
+    </div>
+  </body>
+</html>

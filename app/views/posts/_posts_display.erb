@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+  <%= link_to user_post_path(user_id: post.author_id, id: post.id), class: 'postLink' do %>
+    <div class="postCont">
+      <h3 class="postTitle"><%= post.title %></h3>
+      <p><%= post.text %></p>
+      <p class="comments-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+      </div>
+      <%= render_comments_section(post) %>
+  <% end %>
+<% end %>

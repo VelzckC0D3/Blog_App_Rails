@@ -1,0 +1,9 @@
+<% @user.recent_posts.each do |post| %>
+  <%= link_to user_post_path(user_id: post.author_id, id: post.id), class: 'postCont' do %>
+    <div class="userPost">
+      <h3 class="postTItle"><%= post.title %></h3>
+      <p><%= post.text %></p>
+      <p class="comments-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+    </div>
+  <% end %>
+<% end %>

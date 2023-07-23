@@ -1,0 +1,66 @@
+.userCard {
+  width: 100%;
+}
+
+.users {
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.usersCont {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  transition: all 150ms ease-in-out;
+  gap: 2rem;
+}
+
+.usersCont:hover {
+  transform: scale(1.05);
+}
+
+.photo {
+  height: 9rem;
+  border: 2px solid rgb(226, 226, 226);
+}
+
+.userInfo {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: rgb(226, 226, 226);
+  transition: all 150ms ease-in-out;
+}
+
+.usersCont:hover .userInfo {
+  background-color: rgb(226, 226, 226);
+  background-color: rgb(180, 180, 180);
+}
+
+.linkCont {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userName {
+  width: 50%;
+  font-weight: bold;
+  color: black;
+  align-self: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.totalPosts {
+  width: 50%;
+  text-align: center;
+  align-self: flex-end;
+  color: black;
+}

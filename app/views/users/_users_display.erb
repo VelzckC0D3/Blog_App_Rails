@@ -1,0 +1,9 @@
+<div class="users">
+  <% @users.each do |user| %>
+    <a href="<%= user_path(user) %>", class="userCard"> 
+    <div class="usersCont">
+      <img src="<%= user.photo %>" alt="userPhoto" class="photo">
+      <%= user_details_for(user) %>
+    </div>
+  <% end %>
+</div>
