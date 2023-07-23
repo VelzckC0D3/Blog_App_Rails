@@ -1,6 +1,6 @@
 ## Users information
-first_user = User.create(name: 'Tom', photo: 'https://i.postimg.cc/qqFn54L5/Screenshot-2023-07-18-043245.png', bio: 'Teacher from Mexico.', posts_counter: 0)
-second_user = User.create(name: 'Lilly', photo: 'https://i.imgur.com/eJzob1I.png', bio: 'Teacher from Poland.', posts_counter: 0)
+first_user = User.create(name: 'Tom', photo: 'https://i.postimg.cc/gctvJHWH/Screenshot-2023-07-18-151935.png', bio: 'Teacher from Mexico.', posts_counter: 0)
+second_user = User.create(name: 'Lilly', photo: 'https://i.postimg.cc/GttGKHkD/Screenshot-2023-07-18-152128.png', bio: 'Teacher from Poland.', posts_counter: 0)
 
 # User Post
 first_post = Post.create(author_id: 1, title: 'My First Post', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis mi in urna eleifend vehicula sit amet a mauris. Proin eget lacus sit amet velit aliquet dictum.', comments_counter: 0, likes_counter: 0)
