@@ -13,7 +13,8 @@ module PostsHelper
         concat content_tag(:li, 'No comments yet', class: 'comments')
       else
         post.recent_comments.each do |comment|
-          concat content_tag(:li, "Username: #{comment.text.blank? ? 'no comments for the moment' : comment.text}", class: 'comments')
+          concat content_tag(:li, "Username: #{comment.text.blank? ? 'no comments for the moment' : comment.text}",
+                             class: 'comments')
         end
       end
     end
