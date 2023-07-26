@@ -11,10 +11,7 @@
   padding: 1rem;
   background-color: rgb(226, 226, 226);
   text-align: left;
-}
-
-.posts-helper-cont {
-  width: 99%;
+  width: 100%;
   max-width: 85rem;
 }
 

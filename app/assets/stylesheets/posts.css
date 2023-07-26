@@ -22,7 +22,7 @@
 
 .posts-index-wrapper {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 53vh;
   display: flex;
   flex-direction: column;
@@ -32,11 +32,15 @@
   padding-right: 0.5rem;
   width: 100%;
   max-width: 85rem;
+  z-index: 1;
 }
 
-.posts-display {
+.posts-display-card {
   transition: all 150ms ease-in-out;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .posts-display-cont {
@@ -47,17 +51,27 @@
   width: 100%;
 }
 
-.posts-display:hover .posts-display-cont {
-  transform: scale(0.99);
-  background-color: rgb(180, 180, 180);
-  filter: invert(1);
-  user-select: none;
+.posts-helper-cont {
+  background-color: rgb(182, 182, 182);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 83rem;
+  transition: all 150ms ease-in-out;
 }
 
-.posts-display:hover .posts-helper-cont {
+.posts-display-card:hover .posts-display-cont {
+  transform: scale(0.98);
+  background-color: rgb(180, 180, 180);
   filter: invert(1);
-  transform: translateY(-0.5rem) scale(0.98);
+  z-index: 1;
+}
+
+.posts-display-card:hover .posts-helper-cont {
+  transform: translateY(-1rem) scale(0.96);
   background-color: white;
+  filter: invert(1);
+  z-index: 0;
 }
 
 .posts-index-actions {

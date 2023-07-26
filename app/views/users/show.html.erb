@@ -21,10 +21,8 @@
       <div class="users-show-buttons"> 
         <%= button_to 'Go Home', users_path, method: :get, class: 'btn' %>
         <%= button_to 'See More', user_posts_path(@user), method: :get, class: 'btn' %>
-
-        <%# app/views/shared/_n_plus_test %>
-        <%= render partial: 'shared/n_plus_test', locals: { posts: @posts } %>
       </div>
+      
     </div>
   </body>
 </html>

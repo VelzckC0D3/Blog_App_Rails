@@ -65,36 +65,6 @@
   background-color: rgb(180, 180, 180);
 }
 
-.shared-posts-card {
-  width: 100%;
-  max-width: 85rem;
-  opacity: 0;
-}
-
-.shared-posts {
-  padding: 1rem;
-  transition: all 150ms ease-in-out;
-  background-color: rgb(226, 226, 226);
-}
-
-.shared-posts:hover {
-  transform: scale(1.02);
-  background-color: rgb(180, 180, 180);
-  filter: invert(1);
-}
-
-.shared-posts-card:nth-child(3) {
-  animation: fadeIn 0.5s ease-in-out 0.35s forwards;
-}
-
-.shared-posts-card:nth-child(4) {
-  animation: fadeIn 0.5s ease-in-out 0.45s forwards;
-}
-
-.shared-posts-card:nth-child(5) {
-  animation: fadeIn 0.5s ease-in-out 0.55s forwards;
-}
-
 .btn {
   background-color: rgb(226, 226, 226);
   padding: 0.5rem 1rem;
@@ -106,7 +76,7 @@
   display: flex;
   gap: 1rem;
   opacity: 0;
-  animation: fadeIn 0.5s ease-in-out 1s forwards;
+  animation: fadeIn 0.5s ease-in-out 0.6s forwards;
 }
 
 .btn:hover {

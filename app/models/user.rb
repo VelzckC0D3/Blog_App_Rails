@@ -11,4 +11,12 @@ class User < ApplicationRecord
   def recent_posts
     posts.order(created_at: :desc).limit(3)
   end
+
+  def all_posts
+    posts.order(created_at: :desc)
+  end
+
+  def posts_user
+    posts.where(author_id: id)
+  end
 end

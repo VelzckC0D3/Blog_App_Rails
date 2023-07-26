@@ -25,14 +25,6 @@ ul {
   }
 }
 
-/* app/helpers/posts_helper.rb */
-.posts-helper-cont {
-  background-color: rgb(182, 182, 182);
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  transition: all 150ms ease-in-out;
-}
-
 .shared-user-photo {
   height: 9rem;
   border: 2px solid rgb(226, 226, 226);
@@ -60,4 +52,23 @@ ul {
   text-align: center;
   align-self: flex-end;
   color: black;
+}
+
+.shared-posts-card {
+  width: 100%;
+  max-width: 85rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.4s forwards;
+}
+
+.shared-posts {
+  transition: all 150ms ease-in-out;
+  background-color: rgb(226, 226, 226);
+  padding: 1rem;
+}
+
+.shared-posts:hover {
+  filter: invert(1);
+  background-color: rgb(128, 128, 128);
+  transform: scale(0.98) !important;
 }

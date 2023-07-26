@@ -27,4 +27,9 @@ class Post < ApplicationRecord
   def recent_comments
     comments.order(created_at: :desc).limit(5)
   end
+
+  # def comments just for certain author_id
+  def comments_user
+    comments.includes(:user).where(author_id: id)
+  end
 end

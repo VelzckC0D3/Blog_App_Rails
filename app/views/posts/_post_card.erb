@@ -1,7 +1,12 @@
 <div class="posts-card">
-  <div class="text-author">
-    <h1 class="posts-card-title"> <%= @post.title %> </h1>
-    <h2 class="posts-card-author"> <%= @post.user.name %> </h2>
+  <%= stylesheet_link_tag "application" %>
+  <div class="post-card-info">
+    <h1 class="posts-card-title">
+      <%= @post.title %>
+    </h1>
+    <h2 class="posts-card-author">
+      <%= @post.user.name %>
+    </h2>
     <%= render_text_section(@post) %>
   </div>
   <p>Text:
