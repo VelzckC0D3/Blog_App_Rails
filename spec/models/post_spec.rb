@@ -56,6 +56,6 @@ RSpec.describe Post, type: :model do
 
     newer_comments = [comment5, comment4, comment3, comment2, comment1]
 
-    expect(post.find_recent_comments).to eq(newer_comments)
+    expect(post.recent_comments).to eq(newer_comments)
   end
 end

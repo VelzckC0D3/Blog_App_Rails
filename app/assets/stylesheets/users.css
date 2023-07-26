@@ -1,40 +1,72 @@
-.userCard {
-  width: 100%;
+* {
+  font-family: monospace;
 }
 
-.users {
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.user-display-card {
+  width: 100%;
+  max-width: 80rem;
+}
+
+.user-display-card:nth-child(1) {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.15s forwards;
+}
+
+.user-display-card:nth-child(2) {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.45s forwards;
+}
+
+.users-display {
   padding: 3rem 4rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
+  height: 100vh;
+  justify-content: center;
 }
 
-.usersCont {
+.users-display-cont {
   display: flex;
   align-items: center;
-  width: 100%;
   height: 8rem;
   transition: all 150ms ease-in-out;
   gap: 2rem;
 }
 
-.usersCont:hover {
-  transform: scale(1.05);
+.users-display-cont:hover {
+  transform: scale(1.03);
 }
 
-.photo {
+.user-display-photo {
   height: 9rem;
   border: 2px solid rgb(226, 226, 226);
 }
 
-.userInfo {
+.user-helper {
   display: flex;
   width: 100%;
   height: 100%;
   padding: 2rem;
   background-color: rgb(226, 226, 226);
   transition: all 150ms ease-in-out;
+}
+
+.users-display-cont:hover .user-helper {
+  filter: invert(1);
 }
 
 .usersCont:hover .userInfo {
@@ -49,7 +81,7 @@
   justify-content: center;
 }
 
-.userName {
+.user-helper-name {
   width: 50%;
   font-weight: bold;
   color: black;
@@ -58,7 +90,7 @@
   text-decoration: none;
 }
 
-.totalPosts {
+.user-helper-total-posts {
   width: 50%;
   text-align: center;
   align-self: flex-end;

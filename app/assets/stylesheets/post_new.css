@@ -1,0 +1,97 @@
+body {
+  overflow: hidden;
+}
+
+.posts-new {
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.posts-new-cont {
+  width: 100%;
+  max-width: 85rem;
+  background-color: rgb(226, 226, 226);
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts-new-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.posts-new-img {
+  width: 3rem;
+  height: 3rem;
+  background-size: 100%;
+}
+
+.posts-new-user {
+  background-color: white;
+  padding: 0.25rem 0.75rem;
+  margin: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards 0.35s;
+  transition: all 150ms ease-in-out;
+}
+
+.posts-new-user:hover {
+  filter: invert(1);
+  user-select: none;
+}
+
+.posts-new-form {
+  width: 100%;
+}
+
+.posts-new-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  resize: vertical;
+  border: 2px solid rgb(128, 128, 128);
+}
+
+.placeholder {
+  min-height: 10rem;
+  max-height: 35rem;
+}
+
+.posts-new-input:focus {
+  outline: none;
+  border: 2px solid rgb(128, 128, 128);
+}
+
+.posts-new-actions {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn {
+  background-color: rgb(226, 226, 226);
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(163, 163, 163);
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: invert(1);
+  transform: scale(1.05);
+}

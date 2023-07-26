@@ -1,10 +1,15 @@
+<%# app/views/posts/index %>
 <% @posts.each do |post| %>
-  <%= link_to user_post_path(user_id: post.author_id, id: post.id), class: 'postLink' do %>
-    <div class="postCont">
-      <h3 class="postTitle"><%= post.title %></h3>
-      <p><%= post.text %></p>
-      <p class="comments-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
-      </div>
-      <%= render_comments_section(post) %>
+  <%= link_to user_post_path(user_id: post.author_id, id: post.id), class: 'posts-display' do %>
+    <div class="posts-display-cont">
+      <h3 class="posts-display-title"><%= post.title %></h3>
+      <p class="posts-dislplay-text"><%= post.text %></p>
+      <p class="posts-display-actions">Comments:
+        <%= post.comments_counter %>, Likes:
+        <%= post.likes_counter %></p>
+    </div>
+
+     
+    <%= render_comments_section(post) %>
   <% end %>
 <% end %>

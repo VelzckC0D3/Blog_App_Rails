@@ -14,18 +14,15 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def current_user
-    @current_user ||= User.first
-  end
-
   def new
     @post = Post.new
+    @user = User.find(params[:user_id])
   end
 
   def create
     @post = User.find(params[:user_id]).posts.build(post_params)
     if @post.save
-      redirect_to user_posts_path(current_user), notice: 'Post saved successfully'
+      redirect_to user_posts_path, notice: 'The post was successfully added.'
     else
       render :new, alert: 'Error: Post could not be saved'
     end

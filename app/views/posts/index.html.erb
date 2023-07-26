@@ -1,21 +1,25 @@
-<%  PostsHelper %>
+<% PostsHelper %>
 
 <html>
   <head>
-    <%= stylesheet_link_tag 'posts' %>
+    <%= stylesheet_link_tag "posts" %>
   </head>
   <body>
-  <div class="postsCont"> 
-  <div class="userCard">
-    <%= render 'shared/user_card', user: @user %>
-  </div>
+    <div class="posts-index">
+      <div class="posts-index-card">
+        <%= render "shared/user_card", user: @user %>
+      </div>
 
-    <%= render 'posts_display' %>
-    <%= notice %>
-    <%= alert %>
-    <%=link_to 'New Post', new_user_post_path, class: 'btn btn-primary' %>
+      <%# app/views/posts/_posts_display.erb %>
+      <div class="posts-index-wrapper"> 
+      <%= render "posts_display" %>
+      </div>
 
-    <button class="btn">pagination</button>
+      <div class="posts-index-actions">
+        <%= button_to 'Go Back', user_path(@user), method: :get, class: 'btn' %>
+        <%= button_to 'Go Home', users_path, method: :get, class: 'btn' %>
+        <%= link_to "New Post", new_user_post_path, class: "btn" %>
+      </div>
     </div>
   </body>
 </html>

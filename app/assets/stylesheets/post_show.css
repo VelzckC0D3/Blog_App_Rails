@@ -1,13 +1,21 @@
-.post {
+.posts-show {
   padding: 3rem 4rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.postsCont {
-  padding: 3rem 4rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
+.posts-card {
+  padding: 1rem;
+  background-color: rgb(226, 226, 226);
+  text-align: left;
+}
+
+.posts-helper-cont {
+  width: 99%;
+  max-width: 85rem;
 }
 
 .userCard {
@@ -83,14 +91,25 @@
   transform: scale(1.05);
 }
 
-.btn-new {
-  position: absolute;
+.posts-show-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.posts-show-btn {
   margin-top: 1.5rem;
   background-color: rgb(226, 226, 226);
   padding: 0.5rem 1rem;
   border: 2px solid rgb(163, 163, 163);
   transition: all 150ms ease-in-out;
   transform: translateY(-1rem);
+}
+
+.posts-show-btn:hover {
+  filter: invert(1);
+  transform: scale(1.05) translateY(-1rem);
+  cursor: pointer;
 }
 
 .commentsCont {

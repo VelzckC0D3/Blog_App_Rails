@@ -1,0 +1,116 @@
+.user-show-cont {
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+  justify-content: center;
+}
+
+.user-show-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 85rem;
+  height: 8rem;
+  transition: all 150ms ease-in-out;
+  gap: 2rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.1s forwards;
+}
+
+.shared-user-photo {
+  height: 9rem;
+  border: 2px solid rgb(226, 226, 226);
+}
+
+.shared-user-info {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: rgb(226, 226, 226);
+}
+
+.shared-user-name {
+  width: 50%;
+  font-weight: bold;
+  color: black;
+  align-self: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.shared-total-posts {
+  width: 50%;
+  text-align: center;
+  align-self: flex-end;
+  color: black;
+}
+
+.user-show-bio {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.25s forwards;
+  background-color: rgb(226, 226, 226);
+  padding: 1rem;
+  transition: all 150ms ease-in-out;
+  width: 100%;
+  max-width: 85rem;
+}
+
+.user-show-bio:hover {
+  transform: scale(1.035);
+  user-select: none;
+  background-color: rgb(180, 180, 180);
+}
+
+.shared-posts-card {
+  width: 100%;
+  max-width: 85rem;
+  opacity: 0;
+}
+
+.shared-posts {
+  padding: 1rem;
+  transition: all 150ms ease-in-out;
+  background-color: rgb(226, 226, 226);
+}
+
+.shared-posts:hover {
+  transform: scale(1.02);
+  background-color: rgb(180, 180, 180);
+  filter: invert(1);
+}
+
+.shared-posts-card:nth-child(3) {
+  animation: fadeIn 0.5s ease-in-out 0.35s forwards;
+}
+
+.shared-posts-card:nth-child(4) {
+  animation: fadeIn 0.5s ease-in-out 0.45s forwards;
+}
+
+.shared-posts-card:nth-child(5) {
+  animation: fadeIn 0.5s ease-in-out 0.55s forwards;
+}
+
+.btn {
+  background-color: rgb(226, 226, 226);
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(163, 163, 163);
+  transition: all 150ms ease-in-out;
+}
+
+.users-show-buttons {
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 1s forwards;
+}
+
+.btn:hover {
+  filter: invert(1);
+  transform: scale(1.05);
+  cursor: pointer;
+}

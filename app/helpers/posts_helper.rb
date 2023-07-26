@@ -11,11 +11,11 @@ module PostsHelper
   end
 
   def render_comments_section(post)
-    content_tag(:ul, class: 'ul-comments-box') do
-      concat content_tag(:h4, 'Comments:', class: 'section-comments')
+    content_tag(:ul, class: 'posts-helper-cont') do
+      concat content_tag(:h4, 'Comments:', class: 'posts-helper-comments')
 
       if post.comments.blank?
-        concat content_tag(:li, 'no comments for the moment')
+        concat content_tag(:li, 'no comments yet...')
       else
         post.recent_comments.each do |comment|
           concat content_tag(:li, "Username: #{comment.text.blank? ? 'no comments for the moment' : comment.text}")

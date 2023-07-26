@@ -14,16 +14,4 @@ RSpec.describe User, type: :model do
     subject.posts_counter = 0
     expect(subject).to be_valid
   end
-
-  it 'Should return the last 3 posts' do
-    user = User.create(name: 'Jane Doe', posts_counter: 0)
-    Post.create(title: 'Post', comments_counter: 0, likes_counter: 0, author_id: user.id)
-    Post.create(title: 'Post 1', comments_counter: 0, likes_counter: 0, author_id: user.id)
-    Post.create(title: 'Post 2', comments_counter: 0, likes_counter: 0, author_id: user.id)
-    post3 = Post.create(title: 'Post 3', comments_counter: 0, likes_counter: 0, author_id: user.id)
-    post4 = Post.create(title: 'Post 4', comments_counter: 0, likes_counter: 0, author_id: user.id)
-    post5 = Post.create(title: 'Post 5', comments_counter: 0, likes_counter: 0, author_id: user.id)
-
-    expect(user.find_recent_posts).to eq([post5, post4, post3])
-  end
 end

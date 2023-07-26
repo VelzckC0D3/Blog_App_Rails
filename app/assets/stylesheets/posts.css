@@ -1,50 +1,45 @@
-.postsCont {
+.posts-index {
   padding: 3rem 4rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+  height: 100vh;
+  justify-content: center;
 }
 
-.userCard {
+.posts-index-card {
   display: flex;
   align-items: center;
   width: 100%;
+  max-width: 85rem;
   height: 8rem;
   transition: all 150ms ease-in-out;
   gap: 2rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
-.photo {
-  height: 9rem;
-  border: 2px solid rgb(226, 226, 226);
-}
-
-.userInfo {
+.posts-index-wrapper {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 53vh;
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards 0.25s;
+  padding-right: 0.5rem;
   width: 100%;
-  height: 100%;
-  padding: 2rem;
-  background-color: rgb(226, 226, 226);
+  max-width: 85rem;
 }
 
-.userName {
-  width: 50%;
-  font-weight: bold;
-  color: black;
-  align-self: center;
-  text-align: center;
-  text-decoration: none;
+.posts-display {
+  transition: all 150ms ease-in-out;
+  width: 100%;
 }
 
-.totalPosts {
-  width: 50%;
-  text-align: center;
-  align-self: flex-end;
-  color: black;
-}
-
-.userPost {
+.posts-display-cont {
   background-color: rgb(226, 226, 226);
   padding: 1rem;
   transition: all 150ms ease-in-out;
@@ -52,17 +47,24 @@
   width: 100%;
 }
 
-.postCont {
-  background-color: rgb(226, 226, 226);
-  padding: 1rem;
-  transition: all 150ms ease-in-out;
-  min-width: 100%;
-  width: 100%;
-}
-
-.userPost:hover {
-  transform: scale(1.05);
+.posts-display:hover .posts-display-cont {
+  transform: scale(0.99);
   background-color: rgb(180, 180, 180);
+  filter: invert(1);
+  user-select: none;
+}
+
+.posts-display:hover .posts-helper-cont {
+  filter: invert(1);
+  transform: translateY(-0.5rem) scale(0.98);
+  background-color: white;
+}
+
+.posts-index-actions {
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards 0.5s;
 }
 
 .btn {
@@ -70,11 +72,11 @@
   padding: 0.5rem 1rem;
   border: 2px solid rgb(163, 163, 163);
   transition: all 150ms ease-in-out;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: rgb(163, 163, 163);
-  color: white;
+  filter: invert(1);
   transform: scale(1.05);
 }
 
@@ -88,13 +90,4 @@
 .postCont:hover + .commentsCont:hover {
   transform: scale(1.05);
   background-color: rgb(180, 180, 180);
-}
-
-.postLink {
-  transition: all 150ms ease-in-out;
-  width: 100%;
-}
-
-.postLink:hover {
-  transform: scale(1.05);
 }

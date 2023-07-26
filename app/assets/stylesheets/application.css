@@ -6,48 +6,58 @@
   padding: 0;
   text-decoration: none;
   color: black;
+  font-family: monospace;
 }
 
 ul {
   list-style: none !important;
 }
 
-.ul-comments-box {
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* app/helpers/posts_helper.rb */
+.posts-helper-cont {
   background-color: rgb(182, 182, 182);
+  padding: 0.5rem;
   margin-top: 0.5rem;
+  transition: all 150ms ease-in-out;
 }
 
-.post-form {
-  padding: 3rem 4rem;
+.shared-user-photo {
+  height: 9rem;
+  border: 2px solid rgb(226, 226, 226);
+}
+
+.shared-user-info {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.formCont {
   width: 100%;
-  background-color: rgb(226, 226, 226);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.form-control {
-  max-width: 30rem;
-  min-width: 15rem;
-}
-
-.comment-form {
-  margin: 3rem 4rem;
-}
-
-.commentCount {
-  padding: 1rem;
+  height: 100%;
+  padding: 2rem;
   background-color: rgb(226, 226, 226);
 }
 
-#comment_text {
-  max-width: 15rem;
+.shared-user-name {
+  width: 50%;
+  font-weight: bold;
+  color: black;
+  align-self: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.shared-total-posts {
+  width: 50%;
+  text-align: center;
+  align-self: flex-end;
+  color: black;
 }

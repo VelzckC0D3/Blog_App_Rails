@@ -1,24 +1,30 @@
+<!-- app/views/users/show.html.erb -->
+
 <html>
   <head>
-    <%= stylesheet_link_tag 'user_details' %>
+    <%= stylesheet_link_tag 'user_show' %>
   </head>
-
   <body>
+    <div class="user-show-cont">
+      <div class="user-show-card">
+        <%= render 'shared/user_card', user: @user %>
+      </div>
 
-  <div class="userCont">
-  <div class="userCard">
-    <%= render 'shared/user_card', user: @user %>
-  </div>
-    <div class="userBio">
-      <h2 class="bioTitle">Bio</h2>
-      <p class="bioText"><%= @user.bio %></p>
+      <div class="user-show-bio">
+        <h2 class="user-show-title">Bio</h2>
+        <p class="user-show-text"><%= @user.bio %></p>
+      </div>
+
+      <%# app/views/shared/_posts_card %>
+      <%= render partial: 'shared/posts_card', locals: { posts: @user.posts } %>
+
+      <div class="users-show-buttons"> 
+        <%= button_to 'Go Home', users_path, method: :get, class: 'btn' %>
+        <%= button_to 'See More', user_posts_path(@user), method: :get, class: 'btn' %>
+
+        <%# app/views/shared/_n_plus_test %>
+        <%= render partial: 'shared/n_plus_test', locals: { posts: @posts } %>
+      </div>
     </div>
-
-    <%= render partial: 'shared/posts_card', locals: { posts: @user.posts } %>
-
-    <%= link_to 'See more', user_posts_path(@user), class: 'btn' %>
-
-
-  </div>
   </body>
 </html>
