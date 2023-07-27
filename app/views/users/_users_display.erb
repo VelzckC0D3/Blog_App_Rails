@@ -1,7 +1,7 @@
 <%# Styling route: app/assets/stylesheets/users.css %>
 
 <div class="users-display">
-  <% @users.each do |user| %>
+  <% User.order(name: :asc).each do |user| %>
     <a href="<%= user_path(user) %>", class="user-display-card"> 
     <div class="users-display-cont">
       <img src="<%= user.photo %>" alt="userPhoto" class="user-display-photo">

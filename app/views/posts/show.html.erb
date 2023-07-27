@@ -5,11 +5,12 @@
 
   <body>
     <div class="posts-show"> 
+      <div class="posts-show-cont">
       <%= render 'post_card' %>
-      
       <%= notice %>
       <%= alert %>
-      <%= render_comments_section(@post) %>
+      <%= render_comments_show(@post) %>
+      </div>
 
       <div class="posts-show-actions"> 
         <%= button_to 'Go Back', user_posts_path(@post.user), method: :get, class: 'posts-show-btn' %>

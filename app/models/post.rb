@@ -23,7 +23,11 @@ class Post < ApplicationRecord
   end
 
   def recent_comments
-    comments.order(created_at: :desc).limit(5)
+    comments.order(created_at: :desc).limit(3)
+  end
+
+  def all_comments
+    comments.order(created_at: :desc)
   end
 
   # def comments just for certain author_id

@@ -4,15 +4,15 @@
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  height: 100vh;
   justify-content: center;
+  height: 100vh;
 }
 
 .user-show-card {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 85rem;
+  max-width: 80rem;
   height: 8rem;
   transition: all 150ms ease-in-out;
   gap: 2rem;
@@ -56,7 +56,7 @@
   padding: 1rem;
   transition: all 150ms ease-in-out;
   width: 100%;
-  max-width: 85rem;
+  max-width: 80rem;
 }
 
 .user-show-bio:hover {
@@ -73,7 +73,10 @@
 }
 
 .users-show-buttons {
+  width: 100%;
+  max-width: 80rem;
   display: flex;
+  justify-content: flex-end;
   gap: 1rem;
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out 0.6s forwards;

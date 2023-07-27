@@ -41,20 +41,20 @@ RSpec.describe Post, type: :model do
     expect { post.remove_count }.to change { user.reload.posts_counter }.by(-1)
   end
 
-  it 'returns the five most recent comments' do
+  it 'returns the three most recent comments' do
     user = User.create(name: 'Johny Sins', posts_counter: 0)
 
     post = Post.create(author_id: user.id, title: 'First Testing Post', text: 'I expect to be success',
-                       comments_counter: 5, likes_counter: 5)
+                       comments_counter: 3, likes_counter: 3)
 
     Comment.create(post_id: post.id, author_id: user.id, text: 'Hi Tom!')
-    comment1 = Comment.create(post_id: post.id, author_id: user.id, text: 'Hi Tom!')
-    comment2 = Comment.create(post_id: post.id, author_id: user.id, text: 'Hi Tom!')
+    Comment.create(post_id: post.id, author_id: user.id, text: 'Hi Tom!')
+    Comment.create(post_id: post.id, author_id: user.id, text: 'Hi Tom!')
     comment3 = Comment.create(post_id: post.id, author_id: user.id, text: 'Hi Tom!')
     comment4 = Comment.create(post_id: post.id, author_id: user.id, text: 'Hi Tom!')
     comment5 = Comment.create(post_id: post.id, author_id: user.id, text: 'Hi Tom!')
 
-    newer_comments = [comment5, comment4, comment3, comment2, comment1]
+    newer_comments = [comment5, comment4, comment3]
 
     expect(post.recent_comments).to eq(newer_comments)
   end

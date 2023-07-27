@@ -29,6 +29,16 @@
   animation: fadeIn 0.5s ease-in-out 0.45s forwards;
 }
 
+.user-display-card:nth-child(3) {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.75s forwards;
+}
+
+.user-display-card:nth-child(4) {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 1s forwards;
+}
+
 .users-display {
   padding: 3rem 4rem;
   display: flex;
