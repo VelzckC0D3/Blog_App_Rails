@@ -111,7 +111,7 @@ executing the command 'rails s' will start the server of this RoR app
 To run integration tests, you have to follow these steps:
 
 ```sh
-Executing the command `bundle install` will install all the necessary dependencies to run the tests of this RoR app ( If you have not installed it yet )
+Executing the command `bundle install` will install all the necessary dependencies to run the tests of this RoR app
 ```
 
 ```sh
