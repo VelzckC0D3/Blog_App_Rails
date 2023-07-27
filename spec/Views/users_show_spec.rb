@@ -22,8 +22,6 @@ RSpec.describe 'User integration tests', type: :feature do
     Post.all
   end
 
-
-
   describe 'users show' do
     it 'displays the user image' do
       all_users.each do |user|
@@ -80,7 +78,6 @@ RSpec.describe 'User integration tests', type: :feature do
         expect(current_path).to eq(user_post_path(user_id, user_id))
       end
     end
-
 
     it 'see more redirect to all user posts (posts_index)' do
       test_user = User.find(1)
