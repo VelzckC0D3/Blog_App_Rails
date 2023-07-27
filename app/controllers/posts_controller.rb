@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
 
     # Fetch posts for the current user only
-    @posts = @user.posts
+    @posts = Post.includes(:user, comments: :user).all
 
     @comments = Comment.all
   end

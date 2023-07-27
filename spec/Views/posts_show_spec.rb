@@ -87,6 +87,5 @@ RSpec.describe 'User integration tests', type: :feature do
         expect(page).to have_css('.posts-helper-cont')
       end
     end
-
   end
 end
