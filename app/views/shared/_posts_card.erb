@@ -1,5 +1,5 @@
 <% @user.recent_posts.includes(:user, :comments).each do |post| %>
-  <%= link_to user_post_path(user_id: post.author_id, id: post.id), class: 'shared-posts-card' do %>
+  <%= link_to user_post_path(user_id: post.author_id, id: post.id), class: 'shared-posts-card', id: post.id do %>
     <div class="shared-posts">
       <h3 class="postTItle"><%= post.title %></h3>
       <p><%= post.text %></p>

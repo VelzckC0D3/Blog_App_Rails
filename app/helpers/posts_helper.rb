@@ -15,10 +15,11 @@ module PostsHelper
       concat content_tag(:h4, 'Comments:', class: 'posts-helper-comments')
 
       if post.comments.blank?
-        concat content_tag(:li, 'no comments yet...')
+        concat content_tag(:li, 'no comments yet...', class: 'posts-helper-comment')
       else
         post.recent_comments.each do |comment|
-          concat content_tag(:li, "Username: #{comment.text.blank? ? 'no comments for the moment' : comment.text}")
+          concat content_tag(:li, "#{User.find(comment.author_id).name}: #{comment.text.downcase}",
+                             class: 'posts-helper-comment')
         end
       end
     end
