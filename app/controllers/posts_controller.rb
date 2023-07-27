@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
 
     # Fetch posts for the current user only
-    @posts = @user.posts
+    @posts = Post.includes(:user, comments: :user).all
 
     @comments = Comment.all
   end
@@ -21,11 +21,9 @@ class PostsController < ApplicationController
 
   def create
     @post = User.find(params[:user_id]).posts.build(post_params)
-    if @post.save
-      redirect_to user_posts_path, notice: 'The post was successfully added.'
-    else
-      render :new, alert: 'Error: Post could not be saved'
-    end
+    return unless @post.save
+
+    redirect_to user_posts_path
   end
 
   private

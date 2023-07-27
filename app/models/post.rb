@@ -15,12 +15,10 @@ class Post < ApplicationRecord
   after_destroy :remove_count
 
   def add_count
-    puts 'Increment Post Count'
     user.increment!(:posts_counter)
   end
 
   def remove_count
-    puts 'Decrement Post Count'
     user.decrement!(:posts_counter)
   end
 

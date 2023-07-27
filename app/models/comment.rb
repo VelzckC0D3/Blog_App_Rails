@@ -8,12 +8,10 @@ class Comment < ApplicationRecord
   after_destroy :remove_count
 
   def add_count
-    puts 'Increment Comment Count'
     post.increment!(:comments_counter)
   end
 
   def remove_count
-    puts 'Decrement Comment Count'
     post.decrement!(:comments_counter)
   end
 end

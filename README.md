@@ -15,9 +15,10 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
+  - [Testing](#testing)
   - [Usage](#usage)
   - [Deployment](#deployment)
-- [👥 Author](#author)
+- [👥 Authors](#author)
 - [🔭 Future Features](#features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -102,8 +103,30 @@ Install this project with:
 To run the project, execute the following command:
 
 ```sh
-executing the command `rails s` will start the server of this RoR app
+executing the command 'rails s' will start the server of this RoR app
 ```
+
+### Testing
+
+To run integration tests, you have to follow these steps:
+
+```sh
+Executing the command `bundle install` will install all the necessary dependencies to run the tests of this RoR app
+```
+
+```sh
+To run all the tests, execute the command 'rspec'
+```
+
+```sh
+To run specific the specific tests for each view, execute one of the following codes:
+
+Do user_index view test command: 'rspec spec/views/users/index.html.erb_spec.rb'
+Do user_show view test command: 'rspec spec/views/users/show.html.erb_spec.rb'
+Do posts_index view test command: 'rspec spec/views/posts/index.html.erb_spec.rb'
+Do posts_show view test command: 'rspec spec/views/posts/show.html.erb_spec.rb'
+```
+
 
 ### Deployment
 
@@ -113,10 +136,15 @@ No deployment necessary
 
 <!-- AUTHOR -->
 
-## 👥 Author <a name="author"></a>
+## 👥 Authors <a name="author"></a>
 
+👤 Alejandro Velasquez
 - GitHub: [@VelzckC0D3](https://github.com/VelzckC0D3)
 - LinkedIn: [VelzckC0D3](https://www.linkedin.com/in/velzckcode/)
+
+👤 Daniel Falcon
+- GitHub: [@Danfall369](https://github.com/Danfall369)
+- LinkedIn: [Daniel Falcon](https://www.linkedin.com/in/Danfall369/)
 
 <!-- FEATURES -->
 
