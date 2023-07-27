@@ -74,5 +74,19 @@ RSpec.describe 'User integration tests', type: :feature do
       end
     end
 
+    it 'displays the username of the person who wrote the comment' do
+      all_comments.each do |comment|
+        visit user_post_path(comment.author_id, comment.post_id)
+        expect(page).to have_content(User.find(comment.author_id).name)
+      end
+    end
+
+    it 'displays all the comments' do
+      all_comments.each do |comment|
+        visit user_post_path(comment.author_id, comment.post_id)
+        expect(page).to have_css('.posts-helper-cont')
+      end
+    end
+
   end
 end
