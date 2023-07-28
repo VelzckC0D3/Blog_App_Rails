@@ -1,6 +1,6 @@
 .posts-show {
   padding: 3rem 4rem;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +55,9 @@
   transition: all 150ms ease-in-out;
   opacity: 0;
   transform: translateY(-5rem);
-  animation: fadeIn 0.5s ease-in-out 0.2s forwards, go_down 0.5s ease-in-out 0.2s forwards;
+  animation:
+    fadeIn 0.5s ease-in-out 0.2s forwards,
+    go_down 0.5s ease-in-out 0.2s forwards;
 }
 
 .posts-helper-comment {

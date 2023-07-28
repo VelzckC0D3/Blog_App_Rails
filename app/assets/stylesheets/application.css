@@ -53,6 +53,16 @@ body {
   }
 }
 
+@keyframes expand {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
 .layout-app {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -67,20 +77,25 @@ body {
   z-index: 2;
 }
 
-.shared-bar-name {
-  transition: all 150ms ease-in-out;
+.layout-errors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-2rem);
 }
 
 .alerts {
-  display: flex;
-  justify-content: center;
-  grid-column: 2;
+  padding: 0 1rem;
+  opacity: 1;
   opacity: 0;
   animation:
     fadeIn 0.5s ease-in-out 0.5s forwards,
     go_down 0.5s ease-in-out 0.5s forwards,
     go_down 0.5s ease-in-out 3s reverse forwards;
   background-color: rgb(226, 226, 226);
+  text-align: center;
+  width: fit-content;
 }
 
 .shared-bar-options {
@@ -88,6 +103,10 @@ body {
   gap: 1rem;
   justify-content: flex-end;
   grid-column: 3;
+}
+
+.shared-bar-btn {
+  white-space: nowrap;
 }
 
 .shared-bar-btn::before {
@@ -160,17 +179,37 @@ body {
   justify-content: center;
 }
 
+.user-form-title {
+  background-color: rgb(226, 226, 226);
+}
+
+.user-form-name {
+  background-color: white;
+  padding: 0.25rem 0.75rem;
+  margin: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards 0.35s;
+  transition: all 150ms ease-in-out;
+}
+
+.user-form-name:hover {
+  filter: invert(1);
+  cursor: pointer;
+}
+
 .user-form-cont {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   background-color: rgb(226, 226, 226);
   padding: 1rem;
   max-width: 50rem;
   width: 100%;
   margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.2s forwards;
 }
 
 .new_user,
@@ -181,6 +220,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.5s forwards;
 }
 
 .field {
@@ -198,6 +239,8 @@ body {
   width: 70%;
   max-width: 50rem;
   transition: all 150ms ease-in-out;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.5s forwards;
 }
 
 .submit-btn:hover {
@@ -207,13 +250,16 @@ body {
 
 .shared-links {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   filter: invert(1);
   background-color: rgb(226, 226, 226);
   padding: 1rem;
   width: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: expand 150ms ease-in-out 0.7s forwards;
 }
 
 .shared-link {
@@ -233,4 +279,11 @@ body {
 .delete-btn {
   border: none;
   width: 100%;
+}
+
+#error_explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

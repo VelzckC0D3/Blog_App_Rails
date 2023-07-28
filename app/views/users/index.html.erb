@@ -5,5 +5,8 @@
   </head>
   <body>
     <%= render 'users_display' %>
+    <% if User.count < 1 %>
+      <h2> no users yet </h2>
+    <% end %>
   </body>
 </html>
