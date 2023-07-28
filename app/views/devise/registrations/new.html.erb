@@ -1,0 +1,33 @@
+<div class="user-form">
+  <div class="user-form-cont">
+    <h2 class="user-form-title">Sign up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%# render "devise/shared/error_messages", resource: resource %>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email address", class:"form-input", required: true %>
+      </div>
+      <div class="field">
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "full name", class:"form-input", required: true %>
+      </div>
+      <div class="field">
+        <%= f.text_field :bio, autofocus: true, autocomplete: "bio", placeholder: "bio", class:"form-input", required: true %>
+      </div>
+      <div class="field">
+        <%= f.text_field :photo, autofocus: true, autocomplete: "photo", placeholder: "profile picture url", class:"form-input", required: true %>
+      </div>
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "new password", class:"form-input", required: true %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+      </div>
+      <div class="field">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "confirm new password", class:"form-input", required: true %>
+      </div>
+      <%= f.submit "Sign up", class: 'submit-btn' %>
+    <% end %>
+    <div class="shared-links">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

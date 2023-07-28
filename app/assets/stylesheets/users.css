@@ -14,6 +14,18 @@
   }
 }
 
+.users-display {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
 .user-display-card {
   width: 100%;
   max-width: 80rem;
@@ -39,16 +51,6 @@
   animation: fadeIn 0.5s ease-in-out 1s forwards;
 }
 
-.users-display {
-  padding: 3rem 4rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-  height: 100vh;
-  justify-content: center;
-}
-
 .users-display-cont {
   display: flex;
   align-items: center;
@@ -63,6 +65,7 @@
 
 .user-display-photo {
   height: 9rem;
+  width: 9rem;
   border: 2px solid rgb(226, 226, 226);
 }
 

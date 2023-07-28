@@ -8,6 +8,8 @@
 }
 
 .posts-show-cont {
+  width: 100%;
+  max-width: 85rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

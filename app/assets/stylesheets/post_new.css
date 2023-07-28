@@ -3,7 +3,6 @@ body {
 }
 
 .posts-new {
-  padding: 3rem 4rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -16,7 +15,7 @@ body {
 
 .posts-new-cont {
   width: 100%;
-  max-width: 85rem;
+  max-width: 55rem;
   background-color: rgb(226, 226, 226);
   display: flex;
   padding: 1rem;
@@ -62,7 +61,7 @@ body {
   width: 100%;
   padding: 0.5rem;
   margin: 0.5rem 0;
-  resize: vertical;
+  resize: none;
   border: 2px solid rgb(128, 128, 128);
 }
 
@@ -79,7 +78,7 @@ body {
 .posts-new-actions {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem;
 }
 

@@ -2,17 +2,14 @@
 <html>
   <head>
     <title>Velasquez Blog</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    >
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <%= csrf_meta_tags %> <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-
   <body>
+    <div class ="layout-app">
+      <%# app/views/shared/_user_bar %>
+      <%= render partial: 'shared/user_bar' %>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -15,6 +15,12 @@ ul {
   list-style: none !important;
 }
 
+body {
+  height: 100vh;
+  padding: 3rem 4rem;
+  overflow: hidden;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -45,6 +51,58 @@ ul {
   100% {
     transform: translateY(0);
   }
+}
+
+.layout-app {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  gap: 1rem;
+  position: absolute;
+  padding: 0 8rem;
+  left: 0;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  z-index: 2;
+}
+
+.shared-bar-name {
+  transition: all 150ms ease-in-out;
+}
+
+.alerts {
+  display: flex;
+  justify-content: center;
+  grid-column: 2;
+  opacity: 0;
+  animation:
+    fadeIn 0.5s ease-in-out 0.5s forwards,
+    go_down 0.5s ease-in-out 0.5s forwards,
+    go_down 0.5s ease-in-out 3s reverse forwards;
+  background-color: rgb(226, 226, 226);
+}
+
+.shared-bar-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  grid-column: 3;
+}
+
+.shared-bar-btn::before {
+  content: "";
+  background-color: black;
+  height: 1px;
+  position: absolute;
+  top: 1.15rem;
+  transition: transform 0.15s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.shared-bar-btn:hover::before {
+  transform: scaleX(1);
 }
 
 .shared-user-photo {
@@ -93,4 +151,86 @@ ul {
   filter: invert(1);
   background-color: rgb(128, 128, 128);
   transform: scale(0.98) !important;
+}
+
+.user-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-form-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: rgb(226, 226, 226);
+  padding: 1rem;
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.new_user,
+.edit_user {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.field {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.submit-btn {
+  padding: 0.25rem;
+  width: 70%;
+  max-width: 50rem;
+  transition: all 150ms ease-in-out;
+}
+
+.submit-btn:hover {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.shared-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: invert(1);
+  background-color: rgb(226, 226, 226);
+  padding: 1rem;
+  width: 100%;
+}
+
+.shared-link {
+  text-transform: lowercase;
+  background-color: rgb(226, 226, 226);
+  padding: 0.25rem;
+  width: 100%;
+  text-align: center;
+  transition: all 150ms ease-in-out;
+}
+
+.shared-link:hover {
+  filter: invert(1) !important;
+  cursor: pointer;
+}
+
+.delete-btn {
+  border: none;
+  width: 100%;
 }

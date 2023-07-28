@@ -1,5 +1,4 @@
 .posts-index {
-  padding: 3rem 4rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -12,7 +11,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 85rem;
+  max-width: 55rem;
   height: 8rem;
   transition: all 150ms ease-in-out;
   gap: 2rem;
@@ -31,7 +30,7 @@
   animation: fadeIn 0.5s ease-in-out forwards 0.25s;
   padding-right: 0.5rem;
   width: 100%;
-  max-width: 85rem;
+  max-width: 55rem;
   z-index: 1;
 }
 
@@ -81,7 +80,7 @@
   animation: fadeIn 0.5s ease-in-out forwards 0.5s;
   justify-content: flex-end;
   width: 100%;
-  max-width: 80rem;
+  max-width: 55rem;
 }
 
 .btn {

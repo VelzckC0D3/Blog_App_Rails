@@ -1,11 +1,13 @@
 .user-show-cont {
-  padding: 3rem 4rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   height: 100vh;
+  width: 100%;
+  max-width: 55rem;
+  margin: 0 auto;
 }
 
 .user-show-card {
