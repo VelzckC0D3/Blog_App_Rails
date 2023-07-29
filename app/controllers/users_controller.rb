@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.includes(:comments, :posts, :likes).all
   end
 
   def show
-    @user = User.find(params[:id])
-    @posts = Post.all
+    @user = User.includes(:comments, :posts, :likes).find(params[:id])
+    @posts = @user.all_posts
   end
 end

@@ -1,3 +1,4 @@
+ <%= turbo_include_tags %>
 <div class="user-form">
   <%= render "devise/shared/error_messages", resource: resource %> </br>
 <div class="user-form-cont">
@@ -29,10 +30,9 @@
   <% end %>
   <div class="shared-links">
     <%= link_to "go back", user_posts_path(current_user), class: "shared-link" %>
-    <%= button_to "delete account", registration_path(resource_name), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}, class: 'shared-link delete-btn' %>
+    <%= button_to "delete account", registration_path(resource_name), method: :delete, form: {data: {turbo_confirm: 'Are you sure? this action can not be undone'}}, class: 'shared-link delete-btn' %>
     <style>
       .button_to{width: 100%}
     </style>
   </div>
-</end>
 </div>

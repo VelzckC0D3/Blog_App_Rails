@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
 <html>
   <head>
     <title>Velasquez Blog</title>
-    <meta name= "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <%= csrf_meta_tags %> <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
   <body>
     <div class ="layout-app">

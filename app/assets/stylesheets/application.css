@@ -83,6 +83,11 @@ body {
   align-items: center;
   flex-direction: column;
   transform: translateY(-2rem);
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  z-index: 2;
+  padding: 0 5rem;
 }
 
 .alerts {

@@ -1,4 +1,0 @@
-<!-- app/views/users/show.html.erb -->
-<% Post.includes(:user).all.each do |post| %>
-  <% Rails.logger.debug "#{post.title} was written by #{post.user.name}" %>
-<% end %>

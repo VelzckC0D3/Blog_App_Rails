@@ -1,4 +1,3 @@
-<%# app/views/posts/_posts_display.erb %>
 <% @user.posts_user.each do |post| %>
   <%= stylesheet_link_tag "posts" %>
   <%= link_to user_post_path(user_id: post.author_id, id: post.id), class: 'posts-display-card' do %>
