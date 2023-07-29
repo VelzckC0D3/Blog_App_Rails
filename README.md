@@ -150,7 +150,7 @@ No deployment necessary
 
 👤 Daniel Carrera
 - GitHub: [@Carreraprogrammer](https://github.com/carreraprogrammer)
-- LinkedIn: [Daniel Falcon](https://www.linkedin.com/in/carreraprogrammer/)
+- LinkedIn: [Daniel Carrera](https://www.linkedin.com/in/carreraprogrammer/)
 
 <!-- FEATURES -->
 
