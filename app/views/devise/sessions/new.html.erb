@@ -15,6 +15,9 @@
     <div class="shared-links">
       <%= link_to "go back", users_path, class: 'shared-link go-back' %>
       <%= render "devise/shared/links" %>
+      <style>
+        .shared-link:nth-child(2) {display: none; }
+      </style>
     </div>
   </div>
 </div>
