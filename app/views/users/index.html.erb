@@ -4,6 +4,19 @@
     <%= stylesheet_link_tag 'users' %>
   </head>
   <body>
-    <%= render 'users_display' %>
+    <% if User.count < 1 %>
+      <div class="users-display">
+        <h2> no users yet, register now</h2>
+        <%= link_to 'Be the first one!', new_user_registration_path, method: :get, class: 'btn' %>
+        <style>
+          .users-display {gap: 1rem;}
+          .btn{background-color: rgb(226, 226, 226); padding: 0.5rem; border: 1px solid black; transition: all 0.25s ease-in-out; transform: scale(1.2);}
+          .btn:hover{filter: invert(1)}
+          .shared-bar-options{display: none}
+        </style>
+      </div>
+    <% else %>
+      <%= render 'users_display' %>
+    <% end %>
   </body>
 </html>

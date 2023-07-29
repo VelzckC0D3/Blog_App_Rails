@@ -1,11 +1,13 @@
 .user-show-cont {
-  padding: 3rem 4rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  max-width: 55rem;
+  margin: 0 auto;
 }
 
 .user-show-card {
@@ -70,6 +72,7 @@
   padding: 0.5rem 1rem;
   border: 2px solid rgb(163, 163, 163);
   transition: all 150ms ease-in-out;
+  text-transform: lowercase;
 }
 
 .users-show-buttons {

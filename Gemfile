@@ -34,6 +34,8 @@ gem 'erb-formatter'
 
 gem 'kaminari'
 
+gem 'rails-ujs'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -79,3 +81,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'devise', '~> 4.9'
+gem 'solargraph'

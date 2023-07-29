@@ -1,0 +1,38 @@
+<div class="user-form">
+  <%= render "devise/shared/error_messages", resource: resource %> </br>
+<div class="user-form-cont">
+  <h2 class="user-form-title">Edit <%= resource_name.to_s.humanize %></h2>
+  <p class="user-form-name">Editing: <%= current_user.name  %> </p>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-input", placeholder: "update email" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :photo, autofocus: true, autocomplete: "photo", class:"form-input", placeholder: "update photo url" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :bio, autofocus: true, autocomplete: "photo", class:"form-input", placeholder: "update bio" %>
+    </div>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+    <div class="field">
+      <%= f.password_field :current_password, autocomplete: "current-password", class:"form-input", placeholder: "confirm current password" %>
+    </div>
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", class:"form-input", placeholder: "new password (six characters minimum)" %>
+    </div>
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-input", placeholder: "confirm new password" %>
+    </div>
+    <%= f.submit "Update", class:"form-input", required: true, placeholder: "placeholder", class: "submit-btn" %>
+  <% end %>
+  <div class="shared-links">
+    <%= link_to "go back", user_posts_path(current_user), class: "shared-link" %>
+    <%= button_to "delete account", registration_path(resource_name), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}, class: 'shared-link delete-btn' %>
+    <style>
+      .button_to{width: 100%}
+    </style>
+  </div>
+</end>
+</div>

@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+  <%= link_to current_user.name, user_posts_path(current_user), class: 'shared-bar-name' %>
+  <div class="shared-bar-options">
+    <%= link_to 'config', edit_user_registration_path, class: 'shared-bar-btn' %>
+    <%= link_to 'logout', destroy_user_session_path, method: :delete, class: 'shared-bar-btn' %>
+    <style>
+      .shared-bar-btn:nth-child(1)::before {width: 3.3rem;}.shared-bar-btn:nth-child(2)::before {width: 3.3rem;}
+    </style>
+  </div>
+<% else %>
+  <div class="shared-bar-options">
+    <%= link_to 'log in', new_user_session_path, method: :get, class: 'shared-bar-btn' %>
+    <%= link_to 'sign up', new_user_registration_path, method: :get, class: 'shared-bar-btn' %>
+  </div>
+  <style>
+    .shared-bar-btn:nth-child(1)::before {width: 3.3rem;}.shared-bar-btn:nth-child(2)::before {width: 3.8rem;}
+  </style>
+<% end %>

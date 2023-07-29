@@ -1,21 +1,17 @@
 <%# Route %>
 <%= stylesheet_link_tag "post_new" %>
-
 <div class="posts-new">
   <div class="posts-new-cont">
     <h1 class="posts-new-title">New Post</h1>
-    <p class="posts-new-user">Actual User: <%= @user.name %> </p>
+    <p class="posts-new-user">By: <%= @user.name %> </p>
     <%= form_with(model: @post, url: user_posts_path, class: 'posts-new-form') do |form| %>
-
       <%= form.text_field :title, class: "posts-new-input", placeholder: "Title", id: "post_title", required: true %>
       <%= form.text_area :text, class: "posts-new-input placeholder", rows: 15, placeholder: "Content...", id: "post_content", required: true %>
-
-    <div class="posts-new-actions">
+      <div class="posts-new-actions">
         <%= form.submit "Add New Post", class: "btn" %>
-          <% end %>
-        <%= button_to 'Go Home', users_path, method: :get, class: 'btn'%>
-        <%= button_to 'Go Back', user_posts_path(@user), method: :get, class: 'btn' %>
+      <% end %>
+      <%= button_to 'Go Home', users_path, method: :get, class: 'btn'%>
+      <%= button_to 'Go Back', user_posts_path(@user), method: :get, class: 'btn' %>
     </div>
-
   </div>
 </div>

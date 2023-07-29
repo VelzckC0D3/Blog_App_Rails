@@ -136,15 +136,21 @@ No deployment necessary
 
 <!-- AUTHOR -->
 
-## 👥 Authors <a name="author"></a>
+## 👥 Author <a name="author"></a>
 
 👤 Alejandro Velasquez
 - GitHub: [@VelzckC0D3](https://github.com/VelzckC0D3)
 - LinkedIn: [VelzckC0D3](https://www.linkedin.com/in/velzckcode/)
 
+## ✨ Contributors
+
 👤 Daniel Falcon
 - GitHub: [@Danfall369](https://github.com/Danfall369)
 - LinkedIn: [Daniel Falcon](https://www.linkedin.com/in/Danfall369/)
+
+👤 Daniel Carrera
+- GitHub: [@Carreraprogrammer](https://github.com/carreraprogrammer)
+- LinkedIn: [Daniel Falcon](https://www.linkedin.com/in/carreraprogrammer/)
 
 <!-- FEATURES -->
 

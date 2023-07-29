@@ -1,0 +1,20 @@
+<div class="user-form">
+  <div class="user-form-cont">
+    <h2 class="user-form-title">Log in</h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-input", placeholder: "email address", required: true %>
+      </div>
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "current-password", class:"form-input", placeholder: "password", required: true %>
+      </div>
+      <% if devise_mapping.rememberable? %>
+      <% end %>
+      <%= f.submit "log in", class: "submit-btn" %>
+    <% end %>
+    <div class="shared-links">
+      <%= link_to "go back", users_path, class: 'shared-link go-back' %>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
