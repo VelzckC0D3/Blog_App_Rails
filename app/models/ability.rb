@@ -9,9 +9,7 @@ class Ability
 
     return unless user.role == 'user'
 
-    can :create, Post
-    can :create, Comment
-    can :destroy, Comment
-    can :destroy, Post
+    can :manage, Post, author_id: user.id
+    can :manage, Comment, author_id: user.id
   end
 end
