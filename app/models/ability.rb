@@ -4,13 +4,17 @@ class Ability
     user ||= User.new
     can :read, :all
     can :create, :user
-    can :manage, :all if user.role == 'admin'
-    return unless user.role == 'user'
 
+    if user.role == 'admin'
+      can :manage, :all
+    end
+
+    if user.role == 'user'
     can :read, :all
-    can :create, Post, author_id: user.id
-    can :create, Comment, author_id: user.id
-    can :destroy, Comment, author_id: user.id
-    can :destroy, Post, author_id: user.id
+    can :create, Post
+    can :create, Comment
+    can :destroy, Comment
+    can :destroy, Post
+    end
   end
 end
