@@ -12,7 +12,7 @@
       <% if can? :create, Comment  %>
         <%= button_to 'New Comment', new_comment_path(@post.user), method: :get, class: 'posts-show-btn' %>
       <% end %>
-      <% if can? :destroy, Post %>
+      <% if can? :destroy, Post && current_user.id == @post.user.id or current_user.id == @post.user.id   %>
         <%= button_to 'Delete Post', user_post_path(@post.user, @post.id), method: :delete, data: { turbo_confirm: 'Are you sure? this action can not be undone' }, class: 'posts-show-btn' %>
       <% end %>
     <% end %>
