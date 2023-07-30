@@ -1,14 +1,20 @@
 <%= stylesheet_link_tag 'post_show' %>
+<%= turbo_include_tags %>
 <div class="posts-show">
   <div class="posts-show-cont">
     <%= render 'post_card' %>
-    <%= notice %>
-    <%= alert %>
     <%= render_comments_show(@post) %>
   </div>
   <div class="posts-show-actions">
-    <%= button_to 'Go Back', user_posts_path(@post.user), method: :get, class: 'posts-show-btn' %>
+    <%= button_to 'Go Back', user_posts_path(@post.user), method: :get, class: 'posts-show-btn', data: { turbo: false } %>
     <%= button_to 'Go Home', users_path, method: :get, class: 'posts-show-btn' %>
-    <%= button_to 'New Comment', new_comment_path(@post.user), method: :get, class: 'posts-show-btn' %>
+    <% if user_signed_in? %>
+      <% if can? :create, Comment  %>
+        <%= button_to 'New Comment', new_comment_path(@post.user), method: :get, class: 'posts-show-btn' %>
+      <% end %>
+      <% if can? :destroy, Post && current_user.id == @post.user.id or current_user.id == @post.user.id   %>
+        <%= button_to 'Delete Post', user_post_path(@post.user, @post.id), method: :delete, data: { turbo_confirm: 'Are you sure? this action can not be undone' }, class: 'posts-show-btn' %>
+      <% end %>
+    <% end %>
   </div>
 </div>

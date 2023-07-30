@@ -292,3 +292,31 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* ------- Comments form ------- */
+
+.comments-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments-form-cont {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 55rem;
+}
+
+.text-area {
+  resize: vertical;
+  min-height: 10rem;
+  max-height: 20rem;
+}
+
+/* ------- Comments form ------- */

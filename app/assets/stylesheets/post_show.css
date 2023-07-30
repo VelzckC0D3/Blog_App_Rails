@@ -60,9 +60,37 @@
     go_down 0.5s ease-in-out 0.2s forwards;
 }
 
+.posts-helper-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .posts-helper-comment {
   padding: 0.25rem;
   background-color: rgb(226, 226, 226);
+  display: flex;
+  flex-direction: column;
+}
+
+.posts-helper-delete {
+  /*   padding: 0 0.15rem;
+  text-align: center;
+  left: 6px;
+  float: right;
+  border-radius: 0;
+  transform: translateY(-1.8rem) translateX(100%);
+  position: absolute;
+  */
+  width: 100% !important;
+  border: 1px solid rgb(163, 163, 163);
+  transition: all 0.25s ease-in-out;
+  float: right;
+}
+
+.posts-helper-delete:hover {
+  cursor: pointer;
+  filter: invert(1);
 }
 
 .posts-show-actions {

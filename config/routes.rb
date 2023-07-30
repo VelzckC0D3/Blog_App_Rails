@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   post '/users/:user_id/posts/:id/comments', to: 'comments#create', as: 'create_comment'
 
   get '/likes/:id/create', to: 'likes#create', as: 'increment_likes'
+
+  resources :users do
+    resources :posts, :comments
+  end
 end
