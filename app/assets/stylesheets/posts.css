@@ -32,6 +32,7 @@
   width: 100%;
   max-width: 55rem;
   z-index: 1;
+  transform: translateX(3.5px) !important;
 }
 
 .posts-display-card {
