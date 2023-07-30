@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  namespace :api do
+    namespace :v1 do
+      post 'sessions' => 'sessions#create'
+      resources :users do
+        resources :posts, only: [:index] do
+          resources :comments, only: [:index, :create]
+        end
+      end
+    end
+  end
+
   devise_for :users
   root 'users#index'
   get '/users', to: 'users#index', as: 'users'

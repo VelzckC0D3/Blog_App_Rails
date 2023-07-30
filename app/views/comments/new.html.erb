@@ -8,6 +8,7 @@
       <%= form_with(model: [current_user, Comment.new], url: create_comment_path(current_user), local: true, class: "user-form-cont") do |form| %>
         <h1 class="comments-form-title">New Comment</h1>
         <div class="field">
+          <%= form.label :text %>
           <%= form.text_area :text, rows: 4, placeholder: "add your comment", class: "form-input text-area" %>
         </div>
         <%= form.submit 'Add Comment', class: "submit-btn" %>
