@@ -5,16 +5,13 @@ class Ability
     can :read, :all
     can :create, :user
 
-    if user.role == 'admin'
-      can :manage, :all
-    end
+    can :manage, :all if user.role == 'admin'
 
-    if user.role == 'user'
-    can :read, :all
+    return unless user.role == 'user'
+
     can :create, Post
     can :create, Comment
     can :destroy, Comment
     can :destroy, Post
-    end
   end
 end
