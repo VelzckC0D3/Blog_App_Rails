@@ -21,8 +21,6 @@ class Ability
     can :destroy, Comment, author_id: user.id
     can :destroy, Post, author_id: user.id
 
-
-    #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions
