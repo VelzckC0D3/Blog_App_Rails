@@ -6,13 +6,13 @@
   </div>
   <%# app/views/posts/_posts_display.erb %>
   <div class="posts-index-wrapper">
-    <%= render "posts_display", user: @user %>
+    <%= render "posts_display", user: @user, data: { turbo: false } %>
   </div>
   <div class="posts-index-actions">
     <%= button_to "Go Back", user_path(@user), method: :get, class: "btn" %>
     <%= button_to "Go Home", users_path, method: :get, class: "btn" %>
     <% if user_signed_in? %>
-      <% if @user.id === current_user.id %>
+      <% if current_user.id == @user.id or can? :create, :all %>
         <%= link_to "New Post", new_user_post_path, class: "btn" %>
       <% end %>
     <% end %>

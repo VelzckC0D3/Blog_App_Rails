@@ -1,17 +1,22 @@
 <!-- app/views/comments/new.html.erb -->
-
-<div class="comment-form">
-<div class="commentCount">
-  <h1 class="form-title">New Comment</h1>
-  <% if user_signed_in? %>
-      <%= form_with(model: [current_user, Comment.new], url: create_comment_path(current_user), local: true) do |form| %>
-        <div class="form-group">
-          <%= form.label :text, class: "form-label" %>
-          <%= form.text_area :text, rows: 4, class: "form-control" %>
+<div class="comments-form">
+  <div class="comments-form-cont">
+    <style>
+      .go-back{ filter: invert(1) }
+    </style>
+    <% if user_signed_in? %>
+      <%= form_with(model: [current_user, Comment.new], url: create_comment_path(current_user), local: true, class: "user-form-cont") do |form| %>
+        <h1 class="comments-form-title">New Comment</h1>
+        <div class="field">
+          <%= form.text_area :text, rows: 4, placeholder: "add your comment", class: "form-input text-area" %>
         </div>
-        <%= form.submit 'Add Comment', class: "btn btn-primary" %>
+        <%= form.submit 'Add Comment', class: "submit-btn" %>
+        <%= link_to "go back", :back, class: 'shared-link go-back' %>
       <% end %>
     <% else %>
       <p>You need to <%= link_to 'Log In', new_user_session_path, method: :get %> to comment.</p>
-  <% end %>
-</div>
+      <div class="shared-links">
+        <%= link_to "go back", :back, class: 'shared-link go-back' %>
+      </div>
+    <% end %>
+  </div>

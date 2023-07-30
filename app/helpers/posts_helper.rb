@@ -30,7 +30,14 @@ module PostsHelper
         else
           post.recent_comments.map do |comment|
             content_tag(:div, class: 'posts-helper-comment') do
-              content_tag(:h4, "#{User.find(comment.author_id).name}:", class: 'posts-helper-name') +
+              content_tag(:div, class: 'posts-helper-actions') do
+                content_tag(:h4, "#{User.find(comment.author_id).name}:", class: 'posts-helper-name') +
+                  if user_signed_in? && (comment.author_id == current_user.id or can?(:manage, :all))
+                    button_to('Delete', user_comment_path(user_id: post.user.id, id: comment.id),
+                              method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Delete Comment?' },
+                              class: 'posts-helper-delete submit-btn')
+                  end
+              end +
                 content_tag(:p, comment.text.downcase.to_s, class: 'posts-helper-text')
             end
           end.join.html_safe
