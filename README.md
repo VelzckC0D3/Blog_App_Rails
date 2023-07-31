@@ -1,20 +1,31 @@
 <a name="readme-top"></a>
+
 <div align="center">
   <img src="https://github.com/VelzckC0D3/SQL_Database/assets/92229666/64c8d8a7-b625-4a25-847a-ea02e00df2f4" alt="Sin título-1">
 </div>
+<!-- <div align="center">
+  <p align="center">
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Contact Me</a>
+  </p>
+</div>
+ -->
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Index
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
   - [Testing](#testing)
   - [Usage](#usage)
   - [Deployment](#deployment)
@@ -29,7 +40,7 @@
 
 # 📖 [Blog App] `[Ruby On Rails]` <a name="about-project"></a>
 
-This is a Ruby On Rails app where I started to learn about the migration methods using the MVC design pattern
+Ruby on Rails blog app, following the MVC pattern and using Devise gem authentication system followed by CanCanCan gem authorization, this is a showcase of the power of ruby on rails, this app storages and interacts with the database, you can see the ERD (Entity Relationship Diagram) below
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -54,17 +65,20 @@ This is a Ruby On Rails app where I started to learn about the migration methods
 
 ### Key Features <a name="key-features"></a>
 
-  - **[Migration of Database using Rails method]**
+- **[MVC Pattern]** Follows the MVC(Model, View, Controller) pattern which allows it to be easy to manage
+- **[Authentication]** Counts with an authentication system using [Devise Gem](https://github.com/heartcombo/devise) which allows the user to have an unique account with its own email and password, and also allows the user to edit its own profile
+- **[Migration of Database using Rails method]** All the data storaged is actually being managed by a Database, and the migration of the database is being done using the rails method
+- **[Testing]** All the views are being tested using [RSpec](https://rspec.info/) and [Capybara](https://github.com/teamcapybara/capybara)
+- **[Linters]** It follows the rules of 2 very well knowed linters [Rubocop](https://rubocop.org/) & [Stylelint](https://stylelint.io/), which helps to keep the code clean and easy to read
+- **[Gitflow]** Used [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) as a workflow which allows to have a clean and organized version control
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo & preview <a name="live-demo"></a>
+## 🚀 Preview <a name="live-demo"></a>
 
 Will be implemented in the future
-
- 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -79,7 +93,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 ```sh
- To have a computer, Internet, Keyboard and Mouse, set up Ruby on rails
+ To have ruby installed with the last version of rails
 ```
 
 ### Setup
@@ -88,14 +102,6 @@ Clone this repository to your desired folder:
 
 ```sh
   Run bundle install to install all the gems and dependencies
-```
-
-### Install
-
-Install this project with:
-
-```sh
-  Installation is not necessary
 ```
 
 ### Usage
@@ -127,7 +133,6 @@ Do posts_index view test command: 'rspec spec/views/posts/index.html.erb_spec.rb
 Do posts_show view test command: 'rspec spec/views/posts/show.html.erb_spec.rb'
 ```
 
-
 ### Deployment
 
 No deployment necessary
@@ -138,17 +143,20 @@ No deployment necessary
 
 ## 👥 Author <a name="author"></a>
 
-👤 **Alejandro Velasquez**
+👤 Alejandro Velasquez
+
 - GitHub: [@VelzckC0D3](https://github.com/VelzckC0D3)
 - LinkedIn: [VelzckC0D3](https://www.linkedin.com/in/velzckcode/)
 
 ## ✨ Contributors
 
-👤 **Daniel Falcon**
+👤 Daniel Falcon
+
 - GitHub: [@Danfall369](https://github.com/Danfall369)
 - LinkedIn: [Daniel Falcon](https://www.linkedin.com/in/Danfall369/)
 
-👤 **Daniel Carrera**
+👤 Daniel Carrera
+
 - GitHub: [@Carreraprogrammer](https://github.com/carreraprogrammer)
 - LinkedIn: [Daniel Carrera](https://www.linkedin.com/in/carreraprogrammer/)
 
@@ -156,7 +164,9 @@ No deployment necessary
 
 ## 🔭 Future Features <a name="features"></a>
 
-- [ ] **[User Interface]**
+- **[Responsive Design]** Build a fully responsive design
+- **[Live Demo]** Deploy the app in a live server
+- **[User Profile]** Add a user profile page
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -174,13 +184,14 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, be pending on my profile since I'll be doing much more! 
+If you like this project, be pending on my profile since I'll be doing much more!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
 I would like to thanks my Microverse Team and partners for helping me to get this done.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

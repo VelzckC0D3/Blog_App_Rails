@@ -26,7 +26,9 @@ RSpec.describe Post, type: :model do
   end
 
   it 'increments the post_counter of the associated user' do
-    user = User.create(name: 'Johny Sins', posts_counter: 0)
+    user = User.create(id: 1, name: 'Timothy Gerard', photo: 'testPicture1.jpg', bio: 'Teacher from Mexico.',
+                       posts_counter: 0, email: 'timothy@example.com', password: 'password123', role: 'user',
+                       confirmed_at: Time.now)
     post = Post.create(author_id: user.id, title: 'First Testing Post', text: 'I expect to be success',
                        comments_counter: 0, likes_counter: 0)
 
@@ -34,7 +36,9 @@ RSpec.describe Post, type: :model do
   end
 
   it 'decrements the post_counter of the associated user' do
-    user = User.create(name: 'Johny Sins', posts_counter: 0)
+    user = User.create(id: 1, name: 'Timothy Gerard', photo: 'testPicture1.jpg', bio: 'Teacher from Mexico.',
+                       posts_counter: 0, email: 'timothy@example.com', password: 'password123', role: 'user',
+                       confirmed_at: Time.now)
     post = Post.create(author_id: user.id, title: 'First Testing Post', text: 'I expect to be success',
                        comments_counter: 0, likes_counter: 0)
 
@@ -42,7 +46,9 @@ RSpec.describe Post, type: :model do
   end
 
   it 'returns the three most recent comments' do
-    user = User.create(name: 'Johny Sins', posts_counter: 0)
+    user = User.create(id: 1, name: 'Timothy Gerard', photo: 'testPicture1.jpg', bio: 'Teacher from Mexico.',
+                       posts_counter: 0, email: 'timothy@example.com', password: 'password123', role: 'user',
+                       confirmed_at: Time.now)
 
     post = Post.create(author_id: user.id, title: 'First Testing Post', text: 'I expect to be success',
                        comments_counter: 3, likes_counter: 3)

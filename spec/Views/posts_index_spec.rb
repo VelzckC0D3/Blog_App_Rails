@@ -5,9 +5,12 @@ require 'rails_helper'
 RSpec.describe 'User integration tests', type: :feature do
   before do
     User.create(id: 1, name: 'Timothy Gerard', photo: 'testPicture1.jpg', bio: 'Teacher from Mexico.',
-                posts_counter: 0)
+                posts_counter: 0, email: 'timothy@example.com', password: 'password123', role: 'user',
+                confirmed_at: Time.now) # Set confirmed_at to a non-nil value
+
     User.create(id: 2, name: 'Stephanie Diore', photo: 'testPicture2.png', bio: 'Teacher from Poland.',
-                posts_counter: 0)
+                posts_counter: 0, email: 'stephanie@example.com', password: 'password456', role: 'user',
+                confirmed_at: Time.now) # Set confirmed_at to a non-nil value
 
     Post.create(id: 1, author_id: 1, title: 'First Post', text: 'testing', comments_counter: 0, likes_counter: 0)
     Post.create(id: 2, author_id: 2, title: 'Second Post', text: 'testing', comments_counter: 0, likes_counter: 0)
@@ -21,6 +24,7 @@ RSpec.describe 'User integration tests', type: :feature do
     Comment.create(id: 5, author_id: 2, post_id: 1, text: 'This is my fifth comment')
     Comment.create(id: 6, author_id: 2, post_id: 1, text: 'This is my sixth comment')
   end
+
 
   def all_users
     All.users

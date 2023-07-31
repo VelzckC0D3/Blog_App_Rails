@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   it 'increments the CommentsCounter of the associated post' do
-    user = User.create(name: 'John Doe', posts_counter: 0)
+    user = User.create(id: 1, name: 'Timothy Gerard', photo: 'testPicture1.jpg', bio: 'Teacher from Mexico.',
+                       posts_counter: 0, email: 'timothy@example.com', password: 'password123', role: 'user',
+                       confirmed_at: Time.now)
     post = Post.create(author_id: user.id, title: 'Firt Testing Post', text: 'I expect to be success',
                        comments_counter: 0, likes_counter: 0)
 
@@ -11,7 +13,9 @@ RSpec.describe Comment, type: :model do
   end
 
   it 'decrements the CommentsCounter of the associated post' do
-    user = User.create(name: 'John Doe', posts_counter: 0)
+    user = User.create(id: 1, name: 'Timothy Gerard', photo: 'testPicture1.jpg', bio: 'Teacher from Mexico.',
+                       posts_counter: 0, email: 'timothy@example.com', password: 'password123', role: 'user',
+                       confirmed_at: Time.now)
     post = Post.create(author_id: user.id, title: 'Firt Testing Post', text: 'I expect to be success',
                        comments_counter: 0, likes_counter: 0)
 
