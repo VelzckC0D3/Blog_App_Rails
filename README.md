@@ -109,7 +109,7 @@ Clone this repository to your desired folder:
 To run the project, execute the following command:
 
 ```sh
-executing the command 'rails s' will start the server of this RoR app
+  Executing the command 'rails s' will start the server of this RoR app
 ```
 
 ### Testing
@@ -117,20 +117,20 @@ executing the command 'rails s' will start the server of this RoR app
 To run integration tests, you have to follow these steps:
 
 ```sh
-Executing the command `bundle install` will install all the necessary dependencies to run the tests of this RoR app
+  Executing the command `bundle install` will install all the necessary dependencies to run the tests of this RoR app
 ```
 
 ```sh
-To run all the tests, execute the command 'rspec'
+  To run all the tests, execute the command 'rspec'
 ```
 
 ```sh
-To run specific the specific tests for each view, execute one of the following codes:
+  To run specific the specific tests for each view, execute one of the following codes:
 
-Do user_index view test command: 'rspec spec/views/users/index.html.erb_spec.rb'
-Do user_show view test command: 'rspec spec/views/users/show.html.erb_spec.rb'
-Do posts_index view test command: 'rspec spec/views/posts/index.html.erb_spec.rb'
-Do posts_show view test command: 'rspec spec/views/posts/show.html.erb_spec.rb'
+  Do user_index view test command: 'rspec spec/views/users/index.html.erb_spec.rb'
+  Do user_show view test command: 'rspec spec/views/users/show.html.erb_spec.rb'
+  Do posts_index view test command: 'rspec spec/views/posts/index.html.erb_spec.rb'
+  Do posts_show view test command: 'rspec spec/views/posts/show.html.erb_spec.rb'
 ```
 
 ### Deployment
